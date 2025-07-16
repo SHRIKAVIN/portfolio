@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
       image: 'https://images.pexels.com/photos/163016/crash-test-collision-60-km-h-distraction-163016.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
-      title: 'kbstractors',
+      title: 'KBS tractors',
       description: 'Full-stack tractor rental management system built for family business with comprehensive booking, inventory management, and customer relationship features.',
       icon: Truck,
       tech: ['MERN Stack', 'MongoDB', 'Express', 'Node.js'],
@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
       image: 'https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
-      title: 'kbsearthmovers',
+      title: 'KBS earthmovers',
       description: 'Comprehensive data management system for earthmover equipment with maintenance tracking, operational analytics, and performance monitoring.',
       icon: Database,
       tech: ['React', 'Node.js', 'PostgreSQL', 'Chart.js'],
