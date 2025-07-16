@@ -134,7 +134,7 @@ const Skills: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            Skills & Certifications
+            Skills
           </motion.h2>
           <motion.div
             variants={itemVariants}
