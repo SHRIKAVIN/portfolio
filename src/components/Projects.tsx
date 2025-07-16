@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -160,39 +160,39 @@ const Projects: React.FC = () => {
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-40 sm:h-48 md:h-48 object-cover"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-r ${project.color} opacity-80 group-hover:opacity-70 transition-opacity duration-300`} />
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4">
                   <motion.div 
-                    className="p-3 bg-white/20 backdrop-blur-sm rounded-lg"
+                    className="p-2 sm:p-3 bg-white/20 backdrop-blur-sm rounded-lg"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <project.icon className="w-6 h-6 text-white" />
+                    <project.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </motion.div>
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <motion.h3 
-                  className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300"
+                  className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-indigo-600 transition-colors duration-300"
                   whileHover={{ scale: 1.05 }}
                 >
                   {project.title}
                 </motion.h3>
                 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 mb-3 sm:mb-4 line-clamp-3 text-sm sm:text-base">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                   {project.tech.map((tech) => (
                     <motion.span
                       key={tech}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium"
+                      className="px-2 py-1 sm:px-3 sm:py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium"
                       whileHover={{ scale: 1.1, backgroundColor: "#e0e7ff" }}
                     >
                       {tech}

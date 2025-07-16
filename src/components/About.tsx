@@ -136,7 +136,7 @@ const About: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-2 gap-4 sm:gap-6"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -147,27 +147,27 @@ const About: React.FC = () => {
                   y: -5,
                   boxShadow: "0 20px 40px rgba(99, 102, 241, 0.2)"
                 }}
-                className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+                className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300 relative overflow-hidden"
               >
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
                 />
                 
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 relative z-10">
-                  <stat.icon className="w-6 h-6 text-white" />
+                <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 relative z-10">
+                  <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="text-3xl font-bold text-gray-900 mb-2 relative z-10"
+                  className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2 relative z-10"
                 >
                   <CountUp end={stat.value} duration={2} />
                   {stat.suffix}
                 </motion.div>
                 
-                <p className="text-sm text-gray-600 font-medium relative z-10">{stat.label}</p>
+                <p className="text-xs sm:text-sm text-gray-600 font-medium relative z-10">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>

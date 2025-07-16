@@ -149,19 +149,19 @@ const Skills: React.FC = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="mb-20"
         >
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.title}
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
-                className="bg-gray-50 p-6 rounded-xl relative overflow-hidden"
+                className="bg-gray-50 p-4 sm:p-6 rounded-xl relative overflow-hidden"
               >
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 hover:opacity-5 transition-opacity duration-300"
                 />
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center relative z-10">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 text-center relative z-10">
                   {category.title}
                 </h3>
                 
@@ -169,11 +169,11 @@ const Skills: React.FC = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skill.name}>
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-medium text-gray-700">{skill.name}</span>
-                        <span className="text-sm text-gray-600">{skill.level}%</span>
+                        <span className="font-medium text-gray-700 text-xs sm:text-base">{skill.name}</span>
+                        <span className="text-xs sm:text-sm text-gray-600">{skill.level}%</span>
                       </div>
                       
-                      <div className="w-full bg-gray-200 rounded-full h-2 relative overflow-hidden">
+                      <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2 relative overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={inView ? { width: `${skill.level}%` } : { width: 0 }}

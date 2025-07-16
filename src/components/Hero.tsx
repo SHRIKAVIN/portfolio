@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
     >
       <AnimatedBackground />
       
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center text-white px-2 sm:px-4 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
           className="mb-8"
         >
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent mt-16"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent mt-10 sm:mt-16"
             animate={{ 
               backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
             }}
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
           
           <div
             ref={textRef}
-            className="text-xl md:text-2xl mb-8 font-light"
+            className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-8 font-light"
           >
             Full-Stack Dev | Innovator | Dreamer in Code
           </div>
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="text-lg md:text-xl text-indigo-100 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-lg md:text-xl text-indigo-100 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Computer Science Student at SRM University crafting digital experiences 
             with cutting-edge technologies and innovative solutions.
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="flex justify-center space-x-6 mb-8"
+          className="flex justify-center space-x-4 sm:space-x-6 mb-6 sm:mb-8"
         >
           {socialLinks.map(({ icon: Icon, href, label }) => (
             <motion.a
@@ -98,14 +98,14 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.6 }}
-          className="mb-16"
+          className="mb-10 sm:mb-16"
         >
           <motion.a
             href="/Shrikavin_Resume.pdf"
             download="Shrikavin_B_Resume.pdf"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(99, 102, 241, 0.3)" }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
+            className="inline-flex items-center space-x-2 px-5 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg text-sm sm:text-base"
           >
             <Download size={20} />
             <span>Download Resume</span>
@@ -132,7 +132,7 @@ const Hero: React.FC = () => {
               y: { repeat: Infinity, duration: 2 },
               boxShadow: { repeat: Infinity, duration: 2 }
             }}
-            className="p-3 rounded-full border-2 border-white/30 hover:border-white/60 transition-colors duration-300"
+            className="p-2 sm:p-3 rounded-full border-2 border-white/30 hover:border-white/60 transition-colors duration-300"
             aria-label="Scroll to about section"
           >
             <ChevronDown size={24} />

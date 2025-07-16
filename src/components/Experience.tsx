@@ -112,7 +112,7 @@ const Experience: React.FC = () => {
           />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Experience Section */}
           <motion.div
             variants={containerVariants}
@@ -136,7 +136,7 @@ const Experience: React.FC = () => {
                     scale: 1.02,
                     boxShadow: "0 20px 40px rgba(99, 102, 241, 0.15)"
                   }}
-                  className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+                  className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
                 >
                   <motion.div 
                     className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 hover:opacity-5 transition-opacity duration-300"
@@ -145,7 +145,7 @@ const Experience: React.FC = () => {
                   <div className="flex items-start justify-between mb-4 relative z-10">
                     <div>
                       <motion.h4 
-                        className="text-xl font-bold text-gray-900 mb-1"
+                        className="text-lg sm:text-xl font-bold text-gray-900 mb-1"
                         whileHover={{ color: "#4f46e5" }}
                       >
                         {exp.title}
@@ -163,7 +163,7 @@ const Experience: React.FC = () => {
                     </motion.div>
                   </div>
 
-                  <div className="flex items-center space-x-4 mb-4 text-gray-600 relative z-10">
+                  <div className="flex items-center space-x-2 sm:space-x-4 mb-3 sm:mb-4 text-gray-600 relative z-10">
                     <div className="flex items-center">
                       <Calendar className="w-4 h-4 mr-2" />
                       <span className="text-sm">{exp.duration}</span>
@@ -174,11 +174,11 @@ const Experience: React.FC = () => {
                     </div>
                   </div>
 
-                  <ul className="space-y-2 mb-6 relative z-10">
+                  <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 relative z-10">
                     {exp.description.map((item, idx) => (
                       <motion.li 
                         key={idx} 
-                        className="text-gray-700 flex items-start"
+                        className="text-gray-700 flex items-start text-xs sm:text-base"
                         whileInView={{ opacity: [0, 1], x: [-10, 0] }}
                         transition={{ delay: idx * 0.1 }}
                       >
@@ -188,11 +188,11 @@ const Experience: React.FC = () => {
                     ))}
                   </ul>
 
-                  <div className="flex flex-wrap gap-2 relative z-10">
+                  <div className="flex flex-wrap gap-1 sm:gap-2 relative z-10">
                     {exp.technologies.map((tech) => (
                       <motion.span
                         key={tech}
-                        className="px-3 py-1 bg-indigo-100 text-indigo-700 text-sm rounded-full font-medium"
+                        className="px-2 py-1 sm:px-3 sm:py-1 bg-indigo-100 text-indigo-700 text-xs sm:text-sm rounded-full font-medium"
                         whileHover={{ scale: 1.1, backgroundColor: "#e0e7ff" }}
                       >
                         {tech}

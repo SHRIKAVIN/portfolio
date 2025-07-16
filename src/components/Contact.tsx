@@ -159,13 +159,13 @@ const Contact: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Information */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -187,14 +187,14 @@ const Contact: React.FC = () => {
                     x: 10,
                     boxShadow: "0 10px 30px rgba(99, 102, 241, 0.15)"
                   }}
-                  className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 relative overflow-hidden"
+                  className="flex items-center space-x-2 sm:space-x-4 p-3 sm:p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 relative overflow-hidden"
                 >
                   <motion.div 
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 hover:opacity-5 transition-opacity duration-300"
                   />
                   
                   <motion.div 
-                    className="p-3 bg-indigo-100 rounded-lg relative z-10"
+                    className="p-2 sm:p-3 bg-indigo-100 rounded-lg relative z-10"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
@@ -207,7 +207,7 @@ const Contact: React.FC = () => {
                         href={info.href}
                         className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"
                       >
-                        {info.value}
+                        <div className="text-xs sm:text-sm text-gray-700 font-medium truncate">{info.value}</div>
                       </a>
                     ) : (
                       <p className="text-gray-600">{info.value}</p>

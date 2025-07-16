@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
     >
       <div className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
             {/* Brand */}
             <div className="space-y-4">
               <motion.h3
@@ -63,8 +63,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Social Links & Copyright */}
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+          <div className="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-0">
+            <div className="flex items-center space-x-2 text-gray-400 mb-2 md:mb-0 text-xs sm:text-sm">
               <span>Made with</span>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
@@ -75,8 +75,8 @@ const Footer: React.FC = () => {
               <span>by Shrikavin B</span>
             </div>
 
-            <div className="flex items-center space-x-6">
-              <div className="flex space-x-4">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <div className="flex space-x-3 sm:space-x-4">
                 {socialLinks.map(({ icon: Icon, href, label }) => (
                   <motion.a
                     key={label}
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
                 ))}
               </div>
               
-              <div className="text-gray-400 text-sm">
+              <div className="text-gray-400 text-xs sm:text-sm">
                 © {currentYear} All rights reserved.
               </div>
             </div>
