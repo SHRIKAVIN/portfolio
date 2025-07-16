@@ -104,7 +104,7 @@ const Experience: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            Experience & Publications
+            Experience
           </motion.h2>
           <motion.div
             variants={itemVariants}
