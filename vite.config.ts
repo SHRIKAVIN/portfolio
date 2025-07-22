@@ -29,6 +29,16 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,png,svg,jpg,jpeg,webp,woff2}'],
+        // Exclude PDF from being cached by the service worker
+        runtimeCaching: [
+          {
+            urlPattern: /.*\\.pdf$/,
+            handler: 'NetworkOnly',
+            options: {
+              cacheName: 'pdfs',
+            },
+          },
+        ],
       },
       includeAssets: [
         'icons/icon-72x72.png',
