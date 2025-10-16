@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
             ref={textRef}
             className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-8 font-light"
           >
-            Full-Stack Dev | Innovator | Dreamer in Code
+            Full-Stack Dev | QA Engineer | Innovator | Dreamer in Code
           </div>
           
           <motion.p
