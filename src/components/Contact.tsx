@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
             </motion.div>
 
             <div className="space-y-6">
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((info) => (
                 <motion.div
                   key={info.label}
                   variants={itemVariants}

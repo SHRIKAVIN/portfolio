@@ -102,11 +102,28 @@ const Hero: React.FC = () => {
         >
           <motion.button
             onClick={() => {
-              const link = document.createElement('a');
-              link.href = '/Shrikavin_Resume.pdf';
-              link.target = '_blank';
-              link.rel = 'noopener noreferrer';
-              link.click();
+              // Check if it's iOS
+              const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+              
+              if (isIOS) {
+                // For iOS, open in new tab and show instructions
+                const link = document.createElement('a');
+                link.href = '/Shrikavin_Resume.pdf';
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.click();
+                
+                // Show a brief instruction
+                alert('PDF opened in new tab. Tap the share button (square with arrow) to save to your device.');
+              } else {
+                // For other browsers, try to force download
+                const link = document.createElement('a');
+                link.href = '/Shrikavin_Resume.pdf';
+                link.download = 'Shrikavin_B_Resume.pdf';
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.click();
+              }
             }}
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(99, 102, 241, 0.3)" }}
             whileTap={{ scale: 0.95 }}
