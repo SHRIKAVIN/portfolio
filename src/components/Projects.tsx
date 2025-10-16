@@ -11,16 +11,6 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
-      title: 'SKFLIX',
-      description: 'A sophisticated movie recommendation system built with Spring Boot and MySQL, featuring personalized recommendations, user reviews, and advanced filtering capabilities.',
-      icon: Play,
-      tech: ['Spring Boot', 'MySQL', 'React', 'REST API'],
-      color: 'from-red-500 to-pink-500',
-      github: 'https://github.com/SHRIKAVIN/SKFLIX',
-      demo: 'https://skflixmovies-git-main-shrikavins-projects.vercel.app/',
-      image: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
       title: 'LocalLang.Codes',
       description: 'AI-powered multilingual code generator leveraging Sarvam.ai and Gemini APIs to generate code in multiple programming languages with intelligent translation capabilities.',
       icon: Brain,
@@ -29,15 +19,6 @@ const Projects: React.FC = () => {
       github: 'https://github.com/SHRIKAVIN/Local_Lang.Codes_1',
       demo: 'https://local-lang-codes-1.vercel.app/',
       image: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      title: 'Automated Accident Detection System',
-      description: 'Hardware-based safety solution using GPS and GSM modules for real-time accident detection and emergency response with IoT integration.',
-      icon: Shield,
-      tech: ['Arduino', 'GPS', 'GSM', 'C++', 'IoT'],
-      color: 'from-green-500 to-emerald-500',
-      isHardware: true,
-      image: 'https://images.pexels.com/photos/163016/crash-test-collision-60-km-h-distraction-163016.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'KBS tractors',
@@ -58,7 +39,27 @@ const Projects: React.FC = () => {
       github: 'https://github.com/SHRIKAVIN/kbsearthmovers',
       demo: 'https://kbsearthmovers.vercel.app/',
       image: 'https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800'
-    }
+    },
+    {
+      title: 'SKFLIX',
+      description: 'A sophisticated movie recommendation system built with Spring Boot and MySQL, featuring personalized recommendations, user reviews, and advanced filtering capabilities.',
+      icon: Play,
+      tech: ['Spring Boot', 'MySQL', 'React', 'REST API'],
+      color: 'from-red-500 to-pink-500',
+      github: 'https://github.com/SHRIKAVIN/SKFLIX',
+      demo: 'https://skflixmovies-git-main-shrikavins-projects.vercel.app/',
+      image: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800'
+    },
+
+    {
+      title: 'Automated Accident Detection System',
+      description: 'Hardware-based safety solution using GPS and GSM modules for real-time accident detection and emergency response with IoT integration.',
+      icon: Shield,
+      tech: ['Arduino', 'GPS', 'GSM', 'C++', 'IoT'],
+      color: 'from-green-500 to-emerald-500',
+      isHardware: true,
+      image: 'https://images.pexels.com/photos/163016/crash-test-collision-60-km-h-distraction-163016.jpeg?auto=compress&cs=tinysrgb&w=800'
+    },
   ];
 
   const containerVariants = {
@@ -145,7 +146,7 @@ const Projects: React.FC = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               variants={itemVariants}

@@ -71,12 +71,7 @@ const Contact: React.FC = () => {
       href: 'https://www.linkedin.com/in/shrikavin-b-9ba681250/',
       color: 'hover:text-blue-600',
     },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com/shrikavin',
-      color: 'hover:text-blue-400',
-    },
+
   ];
 
   const containerVariants = {

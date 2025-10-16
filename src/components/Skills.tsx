@@ -39,6 +39,19 @@ const Skills: React.FC = () => {
         { name: 'MongoDB', level: 78, color: 'from-green-500 to-teal-500' },
       ],
     },
+    {
+      title: 'Corporate Tools & Collaboration',
+      skills: [
+        { name: 'Jira', level: 85, color: 'from-blue-500 to-indigo-600' },
+        { name: 'Microsoft Teams', level: 90, color: 'from-purple-500 to-blue-600' },
+        { name: 'Confluence', level: 80, color: 'from-blue-600 to-cyan-500' },
+        { name: 'Slack', level: 85, color: 'from-green-500 to-emerald-600' },
+        { name: 'Git/GitHub', level: 88, color: 'from-gray-700 to-gray-900' },
+        { name: 'Azure DevOps', level: 75, color: 'from-blue-600 to-indigo-700' },
+        { name: 'Postman', level: 82, color: 'from-orange-500 to-red-500' },
+        { name: 'Figma', level: 70, color: 'from-purple-500 to-pink-500' },
+      ],
+    },
   ];
 
   const certifications = [
@@ -149,7 +162,7 @@ const Skills: React.FC = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="mb-20"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.title}
@@ -219,7 +232,7 @@ const Skills: React.FC = () => {
           </motion.h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {certifications.map((cert, index) => (
+            {certifications.map((cert) => (
               <motion.div
                 key={cert.name}
                 variants={itemVariants}

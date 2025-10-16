@@ -11,6 +11,21 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
+      title: 'QA Intern',
+      company: 'TMRW-Aditya Birla Fashion and Retail',
+      location: 'Bangalore',
+      duration: 'June 2025 - Present',
+      description: [
+        'Develop and maintain automated test suites for e-commerce platforms and mobile applications using industry-standard tools',
+        'Design and implement automated testing frameworks to improve testing efficiency and coverage',
+        'Execute both manual and automated test cases to ensure software functionality and user experience standards',
+        'Collaborate with development teams to integrate automated testing into CI/CD pipelines',
+        'Perform regression testing and validation of new features using automated test scripts and manual verification'
+      ],
+      technologies: ['Test Automation', 'Selenium', 'Cypress', 'Manual Testing', 'Test Case Design', 'Bug Tracking', 'Regression Testing', 'Quality Assurance', 'E-commerce Testing'],
+      color: 'from-emerald-500 to-teal-600'
+    },
+    {
       title: 'Full Stack Intern',
       company: 'Zer01 India',
       location: 'Remote',
