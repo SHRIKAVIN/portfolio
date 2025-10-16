@@ -100,17 +100,21 @@ const Hero: React.FC = () => {
           transition={{ delay: 1.4, duration: 0.6 }}
           className="mb-10 sm:mb-16"
         >
-          <motion.a
-            href="/Shrikavin_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.button
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/Shrikavin_Resume.pdf';
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+              link.click();
+            }}
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(99, 102, 241, 0.3)" }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center space-x-2 px-5 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg text-sm sm:text-base"
           >
             <Download size={20} />
             <span>Download Resume</span>
-          </motion.a>
+          </motion.button>
         </motion.div>
 
         <motion.div
