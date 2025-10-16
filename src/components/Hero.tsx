@@ -101,25 +101,31 @@ const Hero: React.FC = () => {
           className="mb-10 sm:mb-16"
         >
           <motion.button
-            onClick={() => {
-              // Check if it's iOS
-              const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-              
-              if (isIOS) {
-                // For iOS, open in new tab and show instructions
-                const link = document.createElement('a');
-                link.href = '/Shrikavin_Resume.pdf';
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.click();
+            onClick={async () => {
+              try {
+                // For PWA, we need to fetch the file and create a blob
+                const response = await fetch('/Shrikavin_Resume.pdf');
+                const blob = await response.blob();
                 
-                // Show a brief instruction
-                alert('PDF opened in new tab. Tap the share button (square with arrow) to save to your device.');
-              } else {
-                // For other browsers, try to force download
+                // Create object URL
+                const url = window.URL.createObjectURL(blob);
+                
+                // Create download link
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'Shrikavin_B_Resume.pdf';
+                
+                // Append to body, click, and remove
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Clean up object URL
+                window.URL.revokeObjectURL(url);
+              } catch (error) {
+                // Fallback: open in new tab
                 const link = document.createElement('a');
                 link.href = '/Shrikavin_Resume.pdf';
-                link.download = 'Shrikavin_B_Resume.pdf';
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
                 link.click();
