@@ -102,7 +102,8 @@ const Hero: React.FC = () => {
         >
           <motion.a
             href="/Shrikavin_Resume.pdf"
-            download="Shrikavin_B_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(99, 102, 241, 0.3)" }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center space-x-2 px-5 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg text-sm sm:text-base"
